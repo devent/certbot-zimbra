@@ -126,7 +126,7 @@ function request_certificate() {
 	# Request our cert
 	case $ZMODE in
 		https)
-			$LEB_BIN certonly -a standalone --preferred-challenges http -d $DOMAIN
+			$LEB_BIN certonly --standalone --preferred-challenges http -d $DOMAIN
 			;;
 		*)
 			$LEB_BIN certonly -a webroot -w $WEBROOT -d $DOMAIN
